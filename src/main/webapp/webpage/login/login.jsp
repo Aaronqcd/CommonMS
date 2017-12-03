@@ -49,14 +49,14 @@
       <div class="col-sm-10 col-sm-offset-1">
         <div class="login-container">
           <div class="center">
-            <h1 id="id-text2" class="grey">
+            <%--<h1 id="id-text2" class="grey">
               <i class="ace-icon fa fa-leaf green"></i>
                JEECG 演示系统
             </h1>
-            <h4 class="blue" id="id-company-text">www.jeecg.org</h4>
+            <h4 class="blue" id="id-company-text">www.jeecg.org</h4>--%>
           </div>
           <div class="space-6"></div>
-          <div class="position-relative">
+          <div class="position-relative" style="padding-top:50px">
             <div id="login-box" class="login-box visible widget-box no-border">
               <div class="widget-body">
                 <!--update-begin--Author:zhangliang  Date:20170628 for：TASK #2116 【性能问题】优化登录逻辑---------------------->
@@ -121,7 +121,7 @@
                 </form>
               </div>
             </div>
-            <div class="center"><h4 class="blue" id="id-company-text">&copy; JEECG版权所有 v_3.7.1</h4></div>
+            <%--<div class="center"><h4 class="blue" id="id-company-text">&copy; JEECG版权所有 v_3.7.1</h4></div>--%>
             <div class="navbar-fixed-top align-right">
               <br />
               &nbsp;

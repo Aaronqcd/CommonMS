@@ -14,10 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
 
-    <title><t:mutiLang langKey="jeect.platform"/></title>
-
-    <meta name="keywords" content="JEECG 企业级快速开发平台">
-    <meta name="description" content="JEECG 企业级快速开发平台，她采用强大代码生成，在线开发能力">
+    <title>通用管理系统</title>
 
     <link rel="shortcut icon" href="images/favicon.ico">
     <link href="plug-in-ui/hplus/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
@@ -44,8 +41,11 @@
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
+                        <div>
+                            <h1 style="color: #a7b1c2;padding-bottom: 10px;">通用管理系统</h1>
+                        </div>
                         <%--dangzhenghui begin 20170502 for 增加添加头像功能--%>
-                                <span><img alt="image" width="180" height="61" src="plug-in/login/images/jeecg-aceplus.png" /></span>
+                                <%--<span><img alt="image" width="200" height="61" src="plug-in/login/images/timg.jpeg" /></span>--%>
                             <%--dangzhenghui end 20170502 for 增加添加头像功能--%>
                             <%--//update-start--Author: chenj Date:20160726 for: TASK #1207 [改造]h+风格下，去掉logo下面的内容，迁移位置到右上角，主题位置
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -70,8 +70,8 @@
                         </ul>
                          //update-end--Author: chenj Date:20160726 for: TASK #1207 [改造]h+风格下，去掉logo下面的内容，迁移位置到右上角，主题位置 --%>
                     </div>
-                    <div class="logo-element">JEECG
-                    </div>
+                    <%--<div class="logo-element">JEECG
+                    </div>--%>
                 </li>
 
                 <t:menu style="hplus" menuFun="${menuMap}"></t:menu>
@@ -87,7 +87,7 @@
                 <div class="navbar-header" style="height: 60px;"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
                     <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
                         <div class="form-group">
-                            <input type="text" placeholder="欢迎使用Jeecg快速开发平台 …" class="form-control" name="top-search" id="top-search">
+                            <input type="text" placeholder="欢迎使用通用管理系统" class="form-control" name="top-search" id="top-search">
                         </div>
                     </form>
                 </div>
@@ -161,7 +161,7 @@
                             <li><a href="javascript:openwindow('<t:mutiLang langKey="common.ssms.getSysInfos"/>','tSSmsController.do?getSysInfos')"><t:mutiLang langKey="common.ssms.getSysInfos"/></a></li>
                             <li><a href="javascript:add('<t:mutiLang langKey="common.change.style"/>','userController.do?changestyle','',550,250)"><t:mutiLang langKey="common.my.style"/></a></li>
                             <li><a href="javascript:clearLocalstorage()"><t:mutiLang langKey="common.clear.localstorage"/></a></li>
-                            <li><a href="javascript:toJeecgYun()">云应用中心</a></li>
+                            <%--<li><a href="javascript:toJeecgYun()">云应用中心</a></li>--%>
                             <!-- update-start--Author: chenj Date:20160812 for: TASK #1269 【ace h+】风格无用的右上角功能隐藏，暂时注释掉 -->
                             <!-- <li><a href="http://yun.jeecg.org" target="_blank">云应用中心</li> -->
                            <!--  <li class="divider"></li>
@@ -222,12 +222,12 @@
 		</style> 
         <div class="row J_mainContent" id="content-main" style="margin-left:-13px;">
             <div class="proccess" id="panelloadingDiv"><b>&nbsp;</b></div> 
-            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="loginController.do?hplushome" frameborder="0" data-id="loginController.do?hplushome" seamless></iframe>
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="jeecgListDemoController.do?log" frameborder="0" data-id="jeecgListDemoController.do?log" seamless></iframe>
         </div>
         <!-- update-end--Author:zhoujf  Date:20170710 for：TASK #2003 【UI改进】列表加载慢的时候会出现白板  -->
         <!-- update-begin--Author:xuelin  Date:20170611 for：TASK #2100 【列表样式美化】【样式专题】Jeecg平台任务 --1下面这条线，变明朗点--------------------  -->
         <div class="footer" style="border-top:none;">
-            <div class="pull-right">&copy; <t:mutiLang langKey="system.version.number"/> <a href="http://www.jeecg.org/" target="_blank">jeecg</a>
+            <div class="pull-right">
             </div>
         </div>        
 		<!-- update-end--Author:xuelin  Date:20170611 for：TASK #2100 【列表样式美化】【样式专题】Jeecg平台任务 --1下面这条线，变明朗点----------------------  -->
@@ -482,7 +482,7 @@
 <!-- 弹出TAB -->
 <script type="text/javascript" src="plug-in/hplus/hplus-tab.js"></script>
 <!-- 在线聊天 -->
-<%@include file="/context/layui.jsp"%>
+<%--<%@include file="/context/layui.jsp"%>--%>
 <script>
     function logout(){
         /*bootbox.confirm("<t:mutiLang langKey="common.exit.confirm"/>", function(result) {
