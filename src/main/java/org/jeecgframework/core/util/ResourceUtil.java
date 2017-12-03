@@ -120,7 +120,9 @@ public class ResourceUtil {
 		}
 
 		if(requestPath.indexOf("=")!=-1){
-			requestPath = requestPath.substring(0,requestPath.indexOf(".do")+3);
+			if(!requestPath.contains("/service/")) {
+				requestPath = requestPath.substring(0,requestPath.indexOf(".do")+3);
+			}
 		}
 
 		requestPath = requestPath.substring(request.getContextPath().length() + 1);// 去掉项目路径
