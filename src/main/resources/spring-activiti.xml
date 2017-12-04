@@ -18,6 +18,7 @@
           factory-method="getRepositoryService" />
     <bean id="runtimeService" factory-bean="processEngine"
           factory-method="getRuntimeService" />
+    <bean id="formService" factory-bean="processEngine" factory-method="getFormService" />
     <bean id="taskService" factory-bean="processEngine"
           factory-method="getTaskService" />
     <bean id="historyService" factory-bean="processEngine"
@@ -31,4 +32,7 @@
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
+
+    <bean id="restResponseFactory" class="org.activiti.rest.service.api.RestResponseFactory" />
+    <bean id="contentTypeResolver" class="org.activiti.rest.common.application.DefaultContentTypeResolver" />
 </beans>

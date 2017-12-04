@@ -120,6 +120,7 @@ public class ResourceUtil {
 		}
 
 		if(requestPath.indexOf("=")!=-1){
+			//判断是否为activiti工作流方法,如果是activiti工作流方法,则不执行该方法
 			if(!requestPath.contains("/service/")) {
 				requestPath = requestPath.substring(0,requestPath.indexOf(".do")+3);
 			}

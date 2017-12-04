@@ -16,6 +16,9 @@
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Service" />
 	</context:component-scan>
+	<context:component-scan base-package="org.activiti.rest">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
 
 	<!-- ApplicationContext -->
 	<bean class="org.jeecgframework.core.util.ApplicationContextUtil"></bean>
@@ -90,6 +93,19 @@
 		<property name="ssoPropPath" value="sso.properties" />
 		<!-- 不同环境配置选择设置 ,dev_mode/开发模式 ,test_mode/测试模式 ,online_mode/生产模式-->
 		<property name="runMode" value="test_mode" />
+	</bean>
+
+	<!-- 配置RestTemplate -->
+	<!--Http client Factory -->
+	<bean id="httpClientFactory"
+		  class="org.springframework.http.client.SimpleClientHttpRequestFactory">
+		<property name="connectTimeout" value="10000" />
+		<property name="readTimeout" value="10000" />
+	</bean>
+
+	<!--RestTemplate -->
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<constructor-arg ref="httpClientFactory" />
 	</bean>
 	
 	<!-- 拦截器 -->

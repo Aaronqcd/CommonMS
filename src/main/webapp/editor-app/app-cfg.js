@@ -21,5 +21,5 @@
 var ACTIVITI = ACTIVITI || {};
 
 ACTIVITI.CONFIG = {
-	'contextRoot' : '/CommonMS/service',
+	'contextRoot' : '/CommonMS/activiti/service',
 };
