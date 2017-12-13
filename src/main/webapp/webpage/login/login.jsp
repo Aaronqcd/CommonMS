@@ -11,7 +11,7 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta charset="utf-8" />
-  <title><t:mutiLang langKey="jeect.platform"/></title>
+  <title>通用管理系统</title>
    <link rel="shortcut icon" href="images/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <!-- bootstrap & fontawesome -->
@@ -109,7 +109,7 @@
                       <div class="space-4"></div>
 
                 </div>
-                <div class="toolbar clearfix">
+                <%--<div class="toolbar clearfix">
                   <div style="float: right">
                     <a href="#"  class="forgot-password-link">
                     	  语言
@@ -117,7 +117,7 @@
                       <t:dictSelect id="langCode" field="langCode" typeGroupCode="lang" hasLabel="false" extendJson="{style:'padding:2px; width:80px;'}" defaultVal="zh-cn"></t:dictSelect>
                     </a>
                   </div>
-                </div>
+                </div>--%>
                 </form>
               </div>
             </div>
